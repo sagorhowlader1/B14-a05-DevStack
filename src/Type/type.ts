@@ -1,4 +1,4 @@
-export interface IDevStack {
+export interface IDevStackType {
     "id": string,
     "name": string,
     "category": string,
@@ -6,5 +6,7 @@ export interface IDevStack {
     "icon": string,
     "rating": number,
     "difficulty": string,
-    "badge": string
+    "badge": string,
+    "badgeTextColor": string,
+    "badgeBgColor": string
 }

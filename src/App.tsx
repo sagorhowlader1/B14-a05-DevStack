@@ -2,28 +2,28 @@ import { Suspense } from "react";
 import Banner from "./compoents/devStack/Banner";
 import Footer from "./compoents/devStack/Footer";
 import Navbar from "./compoents/devStack/Navbar";
-import Technology from "./compoents/devStack/Technology";
-import type { IDevStack } from "./Type/type";
+import Technologies from "./compoents/devStack/Technologies";
+import type { IDevStackType } from "./Type/type";
 
 
 
-const technologyFetch = async ():Promise<IDevStack[]> =>{
+const technologyFetch = async (): Promise<IDevStackType[]> =>{
   const res = await fetch('/data.json');
   const data = await res.json();
   // console.log(data);
   return data;
-}
+}                                                                                                                                        
 
 function App() {
 // console.log(technologyPromise);
-const technologyPromise = technologyFetch();
+const technologiesPromise = technologyFetch();
 
   return (
     <>
         <Navbar />
         <Banner />
         <Suspense fallback={<h2>Loading...</h2>}>
-          <Technology technologyPromise={technologyPromise} />
+          <Technologies technologiesPromise={technologiesPromise} />
         </Suspense>
         <Footer />
     </>

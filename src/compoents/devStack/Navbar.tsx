@@ -3,7 +3,7 @@ import Logo from "../../assets/logo-text.png";
 
 const Navbar = () => {
   return (
-    <div className="sticky top-0 bg-white">
+    <div className="sticky top-0 z-50 bg-white">
       <div className="container mx-auto">
         <div className="sm:hidden">
             {/* Mobile Navbar */}
