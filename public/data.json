@@ -1,5 +1,6 @@
 [
   {
+    "id": "React",
     "icon": "../src/assets/React.svg.png",
     "badge": "Popular",
     "badgeTextColor": "text-blue-600",
@@ -11,6 +12,7 @@
     "rating": 4.9
   },
   {
+    "id": "Vue.js",
     "icon": "../src/assets/Vue.js.png",
     "badge": "Versatile",
     "badgeTextColor": "#059669",
@@ -22,6 +24,7 @@
     "rating": 4.8
   },
   {
+    "id": "Svelte",
     "icon": "../src/assets/Svelte.png",
     "badge": "Fast",
     "badgeTextColor": "#EA580C",
@@ -33,6 +36,7 @@
     "rating": 4.8
   },
   {
+    "id": "Next.js",
     "icon": "../src/assets/Next.js.svg.png",
     "badge": "Fullstack",
     "badgeTextColor": "#EA580C",
@@ -44,6 +48,7 @@
     "rating": 4.9
   },
   {
+    "id": "Node.js",
     "icon": "../src/assets/Node.js.png",
     "badge": "Standard",
     "badgeTextColor": "#059669",
@@ -55,6 +60,7 @@
     "rating": 4.8
   },
   {
+    "id": "PostgreSQL",
     "icon": "../src/assets/PostgreSQL.png",
     "badge": "TopSQL",
     "badgeTextColor": "#2563EB",
@@ -66,6 +72,7 @@
     "rating": 4.9
   },
   {
+    "id": "Redis",
     "icon": "../src/assets/Redis.svg.png",
     "badge": "Cache",
     "badgeTextColor": "#DC2626",
@@ -77,6 +84,7 @@
     "rating": 4.8
   },
   {
+    "id": "JavaScript",
     "icon": "../src/assets/JavaScript.png",
     "badge": "Ubiquitons",
     "badgeTextColor": "#D97706",
@@ -88,6 +96,7 @@
     "rating": 4.9
   },
   {
+    "id": "TypeScript",
     "icon": "../src/assets/TypeScript.svg.png",
     "badge": "Essential",
     "badgeTextColor": "#0284C7",
@@ -99,6 +108,7 @@
     "rating": 4.9
   },
   {
+    "id": "Java",
     "icon": "../src/assets/Java.png",
     "badge": "Robust",
     "badgeTextColor": "#0284C7",
@@ -110,6 +120,7 @@
     "rating": 4.6
   },
   {
+    "id": "Tailwind CSS",
     "icon": "../src/assets/Tailwind-CSS.svg.png",
     "badge": "Modern",
     "badgeTextColor": "#0891B2",
@@ -121,6 +132,7 @@
     "rating": 4.9
   },
   {
+    "id": "Docker",
     "icon": "../src/assets/Docker.png",
     "badge": "Containers",
     "badgeTextColor": "#0284C7",
