@@ -37,4 +37,4 @@ As a beautiful UI Desgin and I am exsited as a i project make to build .
  3 TypeScript / JavaScrip (ES6+)
  4 Ract-Toatify (NPM Package)
  5 JSON (for technology data)
- 6 Vite (build tool)
+ 6 Vite (build tool).

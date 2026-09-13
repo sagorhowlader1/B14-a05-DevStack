@@ -15,7 +15,7 @@ const Sidebar = ({
   return (
     <aside className="w-full lg:w-95 lg:ml-6">
       <div
-        className="card bg-base-600 rounded-2xl sticky top-6
+        className="card bg-base-600 rounded-2xl sticky top-24
                  border-[#E2E8F0] my-2 lg:my-6  mx-4 px-2 shadow-sm py-6"
       >
         <div>
