@@ -1,37 +1,9 @@
-import { RxHamburgerMenu } from "react-icons/rx";
 import Logo from "../../assets/logo-text.png";
 
 const Navbar = () => {
   return (
     <div className="sticky top-0 z-50 bg-white">
       <div className="container mx-auto">
-        <div className="sm:hidden">
-            {/* Mobile Navbar */}
-          <div className="justify-self-start">
-                <button className="text-2xl">
-                    <RxHamburgerMenu />
-                </button>
-          </div>
-          {/* Logo */}
-
-            <div className="justify-self-center font-bold text-xl">
-                <a href="#">
-                    <img src={Logo} alt="Logo" />
-                </a>
-            </div>
-
-            {/* Sign In / Sign Up */}
-
-            <div className="flex gap-1 justify-self-end">
-            <button className="btn mr-2 rounded-3xl border-none text-sm">
-              Sign In
-            </button>
-            <button className="btn rounded-3xl border-none text-white bg-[#D91B7E] text-sm">
-              Sign Up
-            </button>
-          </div>
-        </div>
-
 
         <div className="flex flex-3 justify-between items-center py-4">
           <div>

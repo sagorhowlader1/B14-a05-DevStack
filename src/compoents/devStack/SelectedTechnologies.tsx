@@ -25,8 +25,7 @@ const SelectedTechnologies = ({
         );
     }
 
-
-
+    
     return (
         <div className="mt-5 space-y-3">
             {selectedTechnologies.map((technology) => (
@@ -55,7 +54,7 @@ const SelectedTechnologies = ({
                             onClick={() => handleRemoveFromStack(technology.id)}
                             className="cursor-pointer"
                             >
-                                <AiOutlineClose className="text-[#94A3B8] text-2xl hover:text-red-200 transition" />
+                                <AiOutlineClose className="text-[#94A3B8] text-2xl hover:text-red-100 transition" />
                             </button>
                         </div>
                     </div>

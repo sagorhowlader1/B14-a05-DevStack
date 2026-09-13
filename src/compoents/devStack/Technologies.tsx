@@ -2,6 +2,7 @@ import { use, useState } from "react";
 import type { IDevStackType } from "../../Type/type";
 import TechnologyCard from "./TechnologyCard";
 import Sidebar from "./Sidebar";
+import { Bounce, toast } from "react-toastify";
 
 
 interface TechnologiesProps {
@@ -31,12 +32,38 @@ const Technologies = ({technologiesPromise}: TechnologiesProps) =>{
         setSelectedTechnologies((previous) =>
             previous.filter((technology) => technology.id !== id)
         );
+
+        toast.info('Technology Removed !', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        });
+
     };
 
 
     const handleRemoveAll = () => {
         setSelectedTechnologies([]);
-    }
+
+
+        toast.info('All Technology Removed!', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        });
+    };
     
     return (<div className="container mx-auto">
         <div className="mt-18">
