@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import Banner from "./compoents/devStack/Banner";
 import Footer from "./compoents/devStack/Footer";
 import Navbar from "./compoents/devStack/Navbar";
@@ -11,11 +11,11 @@ const technologyFetch = async (): Promise<IDevStackType[]> =>{
   const res = await fetch('/data.json');
   const data = await res.json();
   return data;
-}                                                                                                                                        
+};                                                                                                           
 
 
 function App() {
-  const [stack, setStack] = useState([])
+  
 const technologiesPromise = technologyFetch();
 
   return (

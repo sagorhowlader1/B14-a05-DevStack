@@ -1,21 +1,47 @@
+import type { IDevStackType } from "../../Type/type";
+import SelectedTechnologies from "./SelectedTechnologies";
 
-const Sidebar = ({technologies}) =>{
-    console.log(technologies, 'technologies')
-    return(
-        <aside className="w-5xl">
-            <div className="card bg-base-600 rounded-2xl my-6  mx-8 shadow-sm py-3 pb-6">
-                <div className="px-6">
-                        <h2 className="text-2xl text-[#0F172A] font-bold ">Your Stack</h2>
-                    <p className="pb-3 pt-2 text-[#94A3B8]">No technologies selected yet.</p>
-                </div>
-                <div className="mx-8 font-normal border-[#E2E8F0] py-7 rounded-2xl border text-center border-dashed">
-                    <p className="text-center text-[#94A3B8]">Your stack is empty.</p>
-                </div>
-             </div>
-             
-        </aside>
-        
-    )
+interface SidebarProps {
+  selectedTechnologies: IDevStackType[];
+  handleRemoveFromStack: (id: string) => void;
+  handleRemoveAll: () => void;
 }
+
+const Sidebar = ({
+  selectedTechnologies,
+  handleRemoveFromStack,
+  handleRemoveAll,
+}: SidebarProps) => {
+  return (
+    <aside className="w-full lg:w-95 lg:ml-6">
+      <div
+        className="card bg-base-600 rounded-2xl sticky top-6
+                 border-[#E2E8F0] my-2 lg:my-6  mx-8 shadow-sm  p-6"
+      >
+        <div>
+          <h2 className="text-2xl text-[#0F172A] font-bold">Your Stack</h2>
+
+          <div className="flex">
+            <span className="text-xl text-[#0F172A] py-1 rounded-xl font-normal">
+              {selectedTechnologies.length}
+
+              <p className="text-[#94A3B8]">
+                {selectedTechnologies.length === 0
+                  ? "No Technology Selected."
+                  : "Technology Selected"}
+              </p>
+            </span>
+          </div>
+        </div>
+
+        <SelectedTechnologies
+          selectedTechnologies={selectedTechnologies}
+          handleRemoveFromStack={handleRemoveFromStack}
+          handleRemoveAll={handleRemoveAll}
+        />
+      </div>
+    </aside>
+  );
+};
 
 export default Sidebar;

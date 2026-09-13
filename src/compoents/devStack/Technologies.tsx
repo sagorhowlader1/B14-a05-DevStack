@@ -3,28 +3,65 @@ import type { IDevStackType } from "../../Type/type";
 import TechnologyCard from "./TechnologyCard";
 import Sidebar from "./Sidebar";
 
+
 interface TechnologiesProps {
     technologiesPromise: Promise<IDevStackType[]>
 }
 
-const Technologies = ({technologiesPromise}:TechnologiesProps) =>{
+const Technologies = ({technologiesPromise}: TechnologiesProps) =>{
     const technologies = use(technologiesPromise);
-    // console.log(technologies)
    
-    const [addToStackType, setAddToStackType] = useState("addToStack") // addToStack or addedToStack
-    console.log(addToStackType, "add to stack");
+    const [selectedTechnologies, setSelectedTechnologies] = useState<IDevStackType[]>([]);
 
+    const handleAddToStack = (technology: IDevStackType) => {
+        setSelectedTechnologies((previous) => {
+            const alreadySeletcted = previous.some(
+                (item:IDevStackType) => item.id === technology.id
+            );
+
+            if(alreadySeletcted) {
+                return previous;
+            }
+
+            return [...previous, technology]
+        });
+    };
+
+    const handleRemoveFromStack = (id: string) => {
+        setSelectedTechnologies((previous) =>
+            previous.filter((technology) => technology.id !== id)
+        );
+    };
+
+
+    const handleRemoveAll = () => {
+        setSelectedTechnologies([]);
+    }
+    
     return (<div className="container mx-auto">
         <div className="mt-18">
             <h2 className="font-extrabold text-4xl">Explore the <span className="bg-gradient-to-r from-[#EC4899]  to-[#7C3AED] bg-clip-text text-transparent ">Technologies</span></h2>
-            <p className="text-[#64748B] pb-7 pt-3">Pick one technology per category to build your ideal stack.</p>
+            <p className="text-[#64748B] pb-7 pt-3">
+                Pick one technology per category to build your ideal stack.
+            </p>
         </div>
 
-            <div className="flex">
-            <TechnologyCard technologies={technologies} />
-                <Sidebar technologies={technologies}/>
+            <div className="flex flex-col lg:flex-row">
+            <TechnologyCard 
+                technologies={technologies}
+                selectedTechnologies={selectedTechnologies}
+                handleAddToStack={handleAddToStack}
+             />
+
+
+            <Sidebar 
+                selectedTechnologies={selectedTechnologies}
+                handleRemoveFromStack={handleRemoveFromStack}
+                handleRemoveAll={handleRemoveAll}
+            />
             </div>
-    </div>)
-}
+    </div>
+    );
+};
 
 export default Technologies; 
